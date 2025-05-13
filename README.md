@@ -4,7 +4,7 @@
 
 مسابقات دانشگاه در سایت [vjudge.net](https://vjudge.net/) برگزار می‌شود.
 
-# فهرست
+## فهرست
 
 - آشنایی
     - [کار با سایت vjudge](./Introduction/Get%20Started.md)
