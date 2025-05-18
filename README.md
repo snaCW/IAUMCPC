@@ -11,3 +11,7 @@
     - [کدنویسی مسابقاتی](./Introduction/Proper%20Coding.md)
 
 - مسابقات برگزارشده
+    - [Round 7](./Contests/Round%207/Announcement.md)
+
+- مسابقات آینده
+    - [Round 8](./Contests/Round%208/Announcement.md)
