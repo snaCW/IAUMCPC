@@ -146,7 +146,7 @@ int main() {
 ```
 
 ```py
-vowels = ['a', 'o', 'y', 'u', 'i']
+vowels = ['a', 'o', 'y', 'e', 'u', 'i']
 s = input().lower()
 
 for c in s:
@@ -211,8 +211,8 @@ t = int(input())
 
 for _ in range(t):
     grid = [str] * 3
-    for line in grid:
-        line = input()
+    for i in range(3):
+        grid[i] = input()
     
     for line in grid:
         if not '?' in line:
@@ -273,7 +273,7 @@ print(*arr)
 
 از آن‌جایی که چرخاندن کل `S` کاری پرهزینه است، ما در ظاهر آن را می‌چرخانیم و به دنبال مکانی از `T` می‌گردیم که معادل آن چرخش باشد.
 
-کاراکتری که در مکان `S[x][y]` قرار داشته باشد، بعد از یک بار چرخش به مکان `S[y][n - x]` می‌رود. پس لازم است که بررسی کنیم `S[x][y]` برابر است با ‌`T[y][n - x]` یا نه. اگر برابر نبود، پس مجبوریم از عملیات اول (تغییر رنگ) استفاده کنیم.
+کاراکتری که در مکان `S[x][y]` قرار داشته باشد، بعد از یک بار چرخش به مکان `S[y][n - x - 1]` می‌رود. پس لازم است که بررسی کنیم `S[x][y]` برابر است با ‌`T[y][n - x - 1]` یا نه. اگر برابر نبود، پس مجبوریم از عملیات اول (تغییر رنگ) استفاده کنیم.
 
 پس از محاسبه‌ی تعداد تغییر رنگ لازم برای هر چرخش، باید تعداد کل عملیات‌ها را محاسبه کنیم. این عدد برابر تعداد چرخش + تعداد تغییر رنگ است. کوچک‌ترین عدد به‌دست‌آمده، جواب مسئله است.
 
@@ -286,7 +286,7 @@ print(*arr)
 using namespace std;
 
 pair<int, int> rotate(pair<int, int> pos, int n) {
-    return {pos.second, n - pos.first};
+    return {pos.second, n - pos.first - 1};
 }
 
 pair<int, int> rotate(pair<int, int> pos, int n, int count) {
@@ -329,12 +329,12 @@ int main() {
 ```
 
 ```py
-def rotate(x, y, n):
-    return y, n - x
+def rotate_once(x, y, n):
+    return y, n - x - 1
 
 def rotate(x, y, n, count):
     for _ in range(count):
-        x, y = rotate(x, y, n)
+        x, y = rotate_once(x, y, n)
     
     return x, y
 
@@ -342,10 +342,10 @@ n = int(input())
 s = [str] * n
 t = [str] * n
 
-for line in s:
-    line = input()
-for line in t:
-    line = input()
+for i in range(n):
+    s[i] = input()
+for i in range(n):
+    t[i] = input()
 
 color_invert_count = [0] * 4
 for x in range(n):
