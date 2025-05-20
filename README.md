@@ -8,6 +8,7 @@
 
 - آشنایی
     - [کار با سایت vjudge](./Introduction/Get%20Started.md)
+    - [اتصال AtCoder](./Introduction/AtCoder%20Submit.md)
     - [کدنویسی مسابقاتی](./Introduction/Proper%20Coding.md)
 - مسابقات برگزارشده
     - [‏Round 7](./Contests/Round%207/Announcement.md)
